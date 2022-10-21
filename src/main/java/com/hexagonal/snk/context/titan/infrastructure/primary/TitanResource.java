@@ -27,10 +27,10 @@ public class TitanResource {
 
     @PostMapping("/titan")
     public ResponseEntity<TitanDTO> createTitan(@RequestBody TitanDTO titanDTO) {
-        log.debug("REST Request to save Titan : {}", titanDTO);
+        log.info("REST Request to save Titan : {}", titanDTO);
 
         TitanDTO result = titanService.save(titanDTO);
-        log.debug("REST Response Titan save: {}", result);
+        log.info("REST Response Titan save: {}", result);
 
         return ResponseEntity.ok(result);
     }
