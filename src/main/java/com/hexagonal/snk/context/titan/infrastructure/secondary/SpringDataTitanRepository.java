@@ -41,8 +41,8 @@ public class SpringDataTitanRepository implements TitanRepository {
 
     @Override
     public List<Titan> findAll() {
-        // TODO Auto-generated method stub
-        return null;
+        List<TitanEntity> titanEntityList = jpaTitanRepository.findAll();
+        return titanEntityMapper.toDomain(titanEntityList);
     }
 
     @Override
