@@ -1,4 +1,7 @@
-package com.hexagonal.snk.context.titan.domain;
+package com.hexagonal.snk.context.titan.domain.usecases;
+
+import com.hexagonal.snk.context.titan.domain.Titan;
+import com.hexagonal.snk.context.titan.domain.TitanRepository;
 
 public class CreateTitan {
     
@@ -12,13 +15,10 @@ public class CreateTitan {
     
         // validar para poder crear           
           
-        titan.setName("Attack Titan");
-        titan.setHeight("15 meters");
-        titan.setCarrier("Eren Jaeger");
 
         titanRepository.save(titan);
 
         return titan;
-      }
+    }
     
 }
